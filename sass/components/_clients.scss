@@ -1,0 +1,32 @@
+.client {
+  display: flex;
+  @extend %list;
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+    padding-bottom: 0;
+  }
+  &__icon {
+    fill: currentColor;
+  }
+}
+
+.client__link {
+  @include centeredFlex();
+  @extend %link;
+
+  border: 1px solid $client-color;
+  border-radius: 4px;
+  width: 170px;
+  height: 92px;
+  color: $client-color;
+
+  transition: color 250ms $function-animation,
+    border-color 250ms $function-animation;
+
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+    color: $accent-color;
+  }
+}

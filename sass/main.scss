@@ -1,0 +1,24 @@
+@import "./utils/vars";
+@import "./utils/mixins";
+@import "./utils/placeholders";
+
+@import "./components/general";
+@import "./components/site-nav";
+@import "./components/logo";
+@import "./components/contact";
+
+@import "./components/hero";
+@import "./components/hero-button";
+@import "./components/features";
+@import "./components/works";
+@import "./components/comand";
+@import "./components/clients";
+
+@import "./components/social-contacts";
+@import "./components/footer";
+@import "./components/adress";
+@import "./components/footer-form";
+@import "./components/footer-button";
+@import "./components/backdrop";
+@import "./components/close-button";
+@import "./components/modal-form";
