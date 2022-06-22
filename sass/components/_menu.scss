@@ -1,0 +1,79 @@
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+// .menu-container {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 480px;
+//   height: 796px;
+//   background: $primary-white-color;
+//   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+//     0px 1px 3px rgba(0, 0, 0, 0.16);
+//   // z-index: 2;
+
+//   opacity: 0;
+//   visibility: hidden;
+//   pointer-events: none;
+
+//   transition: opacity 250ms linear, visibility 250ms linear;
+
+//   &.is-open {
+//     display: block;
+
+//     opacity: 1;
+//     visibility: visible;
+//     pointer-events: initial;
+//   }
+// }
+@media screen and (max-width: 767px) {
+  .menu-container {
+    background: $primary-white-color;
+
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top: 100%;
+    left: 0;
+
+    width: 100vw;
+    height: 796px;
+    pointer-events: none;
+
+    opacity: 0;
+
+    transition: opacity 700ms $function-animation;
+
+    &.is-open {
+      display: block;
+      opacity: 1;
+
+      pointer-events: initial;
+    }
+  }
+}

@@ -19,58 +19,79 @@
   <body class="body">
     <!--Шапка сайту-->
     <header class="header">
-      <div class="container container--topline">
+      <div class="container">
         <nav class="nav-topline">
           <!--Символ-->
-          <a href="" class="logo" lang="en"
-            ><span class="logo__accent">Web</span>Studio</a
-          >
-          <ul class="site-nav">
-            <li class="site-nav__item">
-              <a
-                href="index.html"
-                class="site-nav__link site-nav__link--current"
-                >Студия
-              </a>
-            </li>
-
-            <li class="site-nav__item">
-              <a href="portfolio.html" class="site-nav__link">Портфолио</a>
-            </li>
-            <li class="site-nav__item">
-              <a href="" class="site-nav__link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <ul class="contact">
-          <li class="contact__item">
-            <a
-              class="contact__link"
-              href="mailto:info@devstudio.com"
-              target="_blank"
-              rel="noopener nofollow noreferrer"
-              aria-label="електронная почта"
+          <div class="nav-topline__smart">
+            <a href="" class="logo" lang="en"
+              ><span class="logo__accent">Web</span>Studio</a
             >
-              <svg class="contact__icon" width="16px" height="12px">
-                <use href="./images/symbol-defs.svg#icon-email"></use>
+            <button
+              type="button"
+              class="menu-button"
+              aria-expanded="false"
+              aria-controls="menu-container"
+              data-menu-button
+            >
+              <svg
+                width="40"
+                height="40"
+                aria-label="Переключатель мобильного меню"
+              >
+                <use class="icon-cross" href="./images/sprite.svg#cross"></use>
+                <use class="icon-menu" href="./images/sprite.svg#menu"></use>
               </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="contact__item">
-            <a
-              class="contact__link"
-              href="tel:+380961111111"
-              target="_blank"
-              rel="noopener nofollow noreferrer"
-              aria-label="номер телефона"
-            >
-              <svg class="contact__icon" width="10px" height="16px">
-                <use href="./images/symbol-defs.svg#icon-phone"></use></svg
-              >+38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+            </button>
+          </div>
+          <div class="menu-container" id="menu-container" data-menu>
+            <ul class="site-nav">
+              <li class="site-nav__item">
+                <a
+                  href="index.html"
+                  class="site-nav__link site-nav__link--current"
+                  >Студия
+                </a>
+              </li>
+
+              <li class="site-nav__item">
+                <a href="portfolio.html" class="site-nav__link">Портфолио</a>
+              </li>
+              <li class="site-nav__item">
+                <a href="" class="site-nav__link">Контакты</a>
+              </li>
+            </ul>
+
+            <ul class="contact">
+              <li class="contact__item">
+                <a
+                  class="contact__link"
+                  href="mailto:info@devstudio.com"
+                  target="_blank"
+                  rel="noopener nofollow noreferrer"
+                  aria-label="електронная почта"
+                >
+                  <svg class="contact__icon" width="16px" height="12px">
+                    <use href="./images/symbol-defs.svg#icon-email"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="contact__item">
+                <a
+                  class="contact__link"
+                  href="tel:+380961111111"
+                  target="_blank"
+                  rel="noopener nofollow noreferrer"
+                  aria-label="номер телефона"
+                >
+                  <svg class="contact__icon" width="10px" height="16px">
+                    <use href="./images/symbol-defs.svg#icon-phone"></use></svg
+                  >+38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </header>
     <!--Головна частина сайту-->
@@ -778,6 +799,7 @@
         </form>
       </div>
     </div>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
