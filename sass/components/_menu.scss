@@ -1,4 +1,4 @@
-.menu-button {
+.button__menu {
   position: absolute;
   top: 50%;
   right: 0px;
@@ -11,48 +11,24 @@
   border: none;
   background-color: transparent;
 
+  cursor: pointer;
+
   @media screen and (min-width: 768px) {
     display: none;
   }
 }
 
-.menu-button .icon-cross {
+.button__menu .button__icon-cross {
   display: none;
 }
 
-.menu-button.is-open .icon-cross {
+.button__menu.is-open .button__icon-cross {
   display: block;
 }
 
-.menu-button.is-open .icon-menu {
+.button__menu.is-open .button__icon-menu {
   display: none;
 }
-
-// .menu-container {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 480px;
-//   height: 796px;
-//   background: $primary-white-color;
-//   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
-//     0px 1px 3px rgba(0, 0, 0, 0.16);
-//   // z-index: 2;
-
-//   opacity: 0;
-//   visibility: hidden;
-//   pointer-events: none;
-
-//   transition: opacity 250ms linear, visibility 250ms linear;
-
-//   &.is-open {
-//     display: block;
-
-//     opacity: 1;
-//     visibility: visible;
-//     pointer-events: initial;
-//   }
-// }
 
 .menu-container {
   @media screen and (max-width: 767px) {
@@ -91,23 +67,19 @@
   }
 }
 
-// .mobile-menu .content {
-//   height: 100%;
-//   background-color: #fff;
-//   width: 70%;
-
-//   transform: translateX(-100%);
-
-//   transition: transform 250ms linear 250ms;
-// }
-
-// .mobile-menu.is-open .content {
-//   transform: translateX(0);
-// }
 .social-menu {
+  @media screen and (min-width: 767px) {
+    display: none;
+  }
   @include centeredFlex($place: flex-start);
 
   @extend %list;
+
+  &__item:not(:last-child) {
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
 }
 
 .social-menu__link {

@@ -61,12 +61,23 @@
   color: #757575;
 }
 
-.impotent,
+@media screen and (max-width: 1199px) {
+  .impotent,
 .comand,
 .portfolio-nav,
 .clients {
-  padding-bottom: 94px;
-  padding-top: 94px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .impotent,
+.comand,
+.portfolio-nav,
+.clients {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
 }
 
 .comand {

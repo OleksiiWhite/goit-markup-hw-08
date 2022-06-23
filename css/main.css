@@ -61,12 +61,23 @@
   color: #757575;
 }
 
-.impotent,
+@media screen and (max-width: 1199px) {
+  .impotent,
 .comand,
 .portfolio-nav,
 .clients {
-  padding-bottom: 94px;
-  padding-top: 94px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .impotent,
+.comand,
+.portfolio-nav,
+.clients {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
 }
 
 .comand {
@@ -316,7 +327,7 @@
   }
 }
 
-.menu-button {
+.button__menu {
   position: absolute;
   top: 50%;
   right: 0px;
@@ -327,22 +338,23 @@
   padding: 0;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
-  .menu-button {
+  .button__menu {
     display: none;
   }
 }
 
-.menu-button .icon-cross {
+.button__menu .button__icon-cross {
   display: none;
 }
 
-.menu-button.is-open .icon-cross {
+.button__menu.is-open .button__icon-cross {
   display: block;
 }
 
-.menu-button.is-open .icon-menu {
+.button__menu.is-open .button__icon-menu {
   display: none;
 }
 
@@ -382,6 +394,16 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+@media screen and (min-width: 767px) {
+  .social-menu {
+    display: none;
+  }
+}
+.social-menu__item:not(:last-child) {
+  padding-right: 10px;
+  margin-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .social-menu__link {
@@ -491,10 +513,19 @@
   background-color: #188ce8;
 }
 
-.skill {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .skill {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .skill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .skill__icon {
   display: flex;
@@ -513,15 +544,34 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-.skill__item:not(:last-child) {
-  margin-right: 30px;
-}
-.skill__item {
-  width: 270px;
+@media screen and (max-width: 767px) {
+  .skill__title {
+    text-align: center;
+  }
 }
 .skill__text {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .skill__item {
+    width: calc((100% - 60px) / 2);
+    margin: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .skill__item {
+    width: 270px;
+  }
+  .skill__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .skill__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .works {

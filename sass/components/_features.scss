@@ -1,6 +1,14 @@
 .skill {
-  @include centeredFlex();
   @extend %list;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  @media screen and (min-width: 1200px) {
+    @include centeredFlex();
+  }
 
   &__icon {
     @include centeredFlex();
@@ -21,18 +29,36 @@
     letter-spacing: 0.03em;
 
     text-transform: uppercase;
-  }
 
-  &__item:not(:last-child) {
-    margin-right: 30px;
-  }
-  &__item {
-    width: 270px;
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
   }
 
   &__text {
     margin-top: 0;
     margin-bottom: 0;
+  }
+}
+
+.skill__item {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
   }
 }
 
