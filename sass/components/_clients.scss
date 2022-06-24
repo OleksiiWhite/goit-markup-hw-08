@@ -1,11 +1,26 @@
 .client {
-  display: flex;
   @extend %list;
 
-  &__item:not(:last-child) {
-    margin-right: 30px;
-    padding-bottom: 0;
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
   }
+  @media screen and (min-width: 1200px) {
+    @include centeredFlex();
+  }
+
+  &__item {
+    @media screen and (max-width: 1199px) {
+      margin: 15px;
+    }
+  }
+  &__item:not(:last-child) {
+    @media screen and (min-width: 1200px) {
+      margin-right: 30px;
+    }
+  }
+
   &__icon {
     fill: currentColor;
   }
@@ -17,8 +32,20 @@
 
   border: 1px solid $client-color;
   border-radius: 4px;
-  width: 170px;
+
   height: 92px;
+
+  @media screen and (max-width: 767px) {
+    min-width: 210px;
+  }
+
+  @media screen and (min-width: 768px) {
+    min-width: 226px;
+  }
+  @media screen and (min-width: 1200px) {
+    min-width: 170px;
+  }
+
   color: $client-color;
 
   transition: color 250ms $function-animation,
