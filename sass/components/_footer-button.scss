@@ -22,6 +22,10 @@
 
   transition: background-color 250ms $function-animation;
 
+  @media screen and (max-width: 1199px) {
+    margin: 20px auto 0px;
+  }
+
   &:hover,
   &:focus {
     background-color: $secondary-accent-color;

@@ -1,13 +1,21 @@
 .footer-form {
-  @include centeredFlex();
   @extend %list;
 
-  margin: 0;
-  padding: 0;
+  @media screen and (min-width: 1200px) {
+    @include centeredFlex();
 
-  &__item:not(:last-child) {
-    margin-right: 12px;
+    &__item:not(:last-child) {
+      margin-right: 12px;
+    }
   }
+
+  @media screen and (max-width: 1199px) {
+    &__item {
+      text-align: center;
+    }
+  }
+
+  padding: 0;
 }
 
 .footer-form__mail {
