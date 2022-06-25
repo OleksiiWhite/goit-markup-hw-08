@@ -1,6 +1,8 @@
 .nav-topline {
   @media screen and (max-width: 767px) {
     &__smart {
+      @include centeredFlex($place: space-between);
+
       position: relative;
     }
   }

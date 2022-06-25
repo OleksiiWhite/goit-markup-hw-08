@@ -135,7 +135,7 @@
 
 @media screen and (max-width: 767px) {
   .header {
-    padding: 16px 0px;
+    padding: 10px 0px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -146,6 +146,9 @@
 
 @media screen and (max-width: 767px) {
   .nav-topline__smart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
   }
 }
@@ -344,11 +347,6 @@
 }
 
 .button__menu {
-  position: absolute;
-  top: 50%;
-  right: 0px;
-  transform: translate(0, -50%);
-  z-index: 3;
   display: inline-flex;
   margin: 0;
   padding: 0;
@@ -380,7 +378,7 @@
     padding: 48px 40px;
     text-align: left;
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 2;
     top: 0;
     left: 0;
