@@ -230,6 +230,11 @@
   letter-spacing: 0.03em;
   color: #212121;
 }
+@media screen and (max-width: 1199px) {
+  .logo {
+    text-align: center;
+  }
+}
 @media screen and (min-width: 1200px) {
   .logo {
     font-size: 26px;
@@ -545,6 +550,12 @@
   .table-box {
     display: flex;
     align-items: baseline;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .table-box {
+    margin-bottom: 60px;
   }
 }
 
@@ -552,15 +563,21 @@
   width: 206px;
   height: 80px;
 }
+@media screen and (max-width: 767px) {
+  .contact-box {
+    margin: 60px auto;
+  }
+}
 @media screen and (max-width: 1199px) {
   .contact-box__text {
     text-align: center;
   }
 }
 
-.mail-box {
-  margin-left: auto;
-  margin-right: 0;
+@media screen and (min-width: 1200px) {
+  .mail-box {
+    margin-left: auto;
+  }
 }
 @media screen and (max-width: 1199px) {
   .mail-box__text {
@@ -568,8 +585,20 @@
   }
 }
 
-.bottom-box {
-  margin-right: 70px;
+@media screen and (max-width: 767px) {
+  .bottom-box {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .bottom-box {
+    margin-right: 165px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .bottom-box {
+    margin-right: 70px;
+  }
 }
 .bottom-box__logo {
   display: block;
@@ -626,7 +655,6 @@
 }
 
 .footer-form__mail {
-  width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -636,6 +664,21 @@
   outline: none;
   padding-left: 16px;
   cursor: pointer;
+}
+@media screen and (max-width: 479px) {
+  .footer-form__mail {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .footer-form__mail {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1199px) {
+  .footer-form__mail {
+    width: 358px;
+  }
 }
 .footer-form__mail::placeholder {
   font-size: 16px;
