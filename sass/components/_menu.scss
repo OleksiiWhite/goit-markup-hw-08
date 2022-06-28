@@ -28,13 +28,13 @@
   @media screen and (max-width: 767px) {
     background: $primary-white-color;
 
-    padding: 0px 40px 48px;
+    padding: 48px 40px;
     text-align: left;
 
     display: none;
     position: fixed;
     z-index: 2;
-    top: 48px;
+    top: 0;
     left: 0;
 
     width: 100%;
@@ -66,6 +66,8 @@
     display: none;
   }
   @include centeredFlex($place: flex-start);
+
+  flex-wrap: wrap;
 
   @extend %list;
 
