@@ -375,12 +375,12 @@
 @media screen and (max-width: 767px) {
   .menu-container {
     background: #ffffff;
-    padding: 48px 40px;
+    padding: 0px 40px 48px;
     text-align: left;
     display: none;
     position: fixed;
     z-index: 2;
-    top: 0;
+    top: 48px;
     left: 0;
     width: 100%;
     height: 100%;
