@@ -1,69 +1,76 @@
-.button__menu {
-  display: inline-flex;
-  margin: 0;
+.menu {
+  @include centeredFlex();
   padding: 0;
-  border: none;
-  background-color: transparent;
+  margin: 0;
 
-  cursor: pointer;
-
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
-}
-
-.button__menu .button__icon-cross {
-  display: none;
-}
-
-.button__menu.is-open .button__icon-cross {
-  display: block;
-}
-
-.button__menu.is-open .button__icon-menu {
-  display: none;
-}
-
-.menu-container {
-  @media screen and (max-width: 767px) {
-    background: $primary-white-color;
-
-    padding: 48px 40px;
-    text-align: left;
-
-    display: none;
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    left: 0;
-
-    width: 100vw;
-
-    pointer-events: none;
-
-    opacity: 0;
-
-    transition: opacity 250ms $function-animation;
-  }
-
-  @media screen and (min-width: 768px) {
-    @include centeredFlex();
-  }
-
-  &.is-open {
-    @media screen and (max-width: 767px) {
-      display: block;
-      opacity: 1;
-
-      pointer-events: initial;
+  @media (max-width: 767px) {
+    & {
+      display: none;
     }
   }
 }
 
-.social-menu {
-  @media screen and (min-width: 767px) {
+.menu-toggle {
+  @include centeredFlex();
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  color: $title-text-color;
+
+  outline: none;
+  transition: color 250ms $function-animation;
+}
+@media (min-width: 768px) {
+  .menu-toggle {
     display: none;
   }
+}
+
+.button__icon-menu,
+.button__icon-cross {
+  fill: currentColor;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  color: $accent-color;
+}
+
+.menu-container {
+  background: $primary-white-color;
+
+  padding: 48px 40px;
+  text-align: left;
+
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+
+  &.is-open {
+    transform: translateX(0);
+
+    pointer-events: initial;
+  }
+
+  & .menu-toggle {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+}
+
+.social-menu {
   @include centeredFlex($place: flex-start);
 
   flex-wrap: wrap;
